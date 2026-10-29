@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Note</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),
+        url("alghozy-Zy2Df1hdguo-unsplash.jpg");
+    background-size:cover;
+    background-position:center;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+.note{
+    width:min(90%,700px);
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:50px;
+    border-radius:28px;
+    color:white;
+    box-shadow:0 20px 60px rgba(0,0,0,0.25);
+    animation:fadeUp 1.6s ease;
+}
+
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.line{
+    width:100px;
+    height:1px;
+    background:rgba(255,255,255,0.6);
+    margin:0 auto 30px;
+}
+
+.message{
+    font-size:1.15rem;
+    line-height:2;
+    text-align:center;
+    color:rgba(255,255,255,0.95);
+}
+
+.signature{
+    margin-top:35px;
+    text-align:center;
+    font-style:italic;
+    opacity:0.85;
+}
+
+.heart{
+    position:absolute;
+    color:rgba(255,255,255,0.2);
+    animation:float 10s linear infinite;
+    font-size:20px;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="note">
+
+    <h1>I'm Sorry</h1>
+
+    <div class="line"></div>
+
+    <div class="message">
+        I will take better care of my words from now on.<br><br>
+
+        I'm truly sorry for what I did, especially for saying it in the group,
+        in front of everyone. Looking back, I realize it must have hurt more
+        than I understood at the moment.<br><br>
+
+        What bothers me the most isn't the mistake itself,
+        but knowing that I was the reason behind your sadness.<br><br>
+
+        And strangely, what I miss the most right now is your face,
+        the smile and comfort that used to be there.<br><br>
+
+        I don't expect everything to be fixed instantly,
+        but I genuinely wanted you to know that I'm sorry.
+    </div>
+
+    <div class="signature">
+        ❤️
+    </div>
+
+</div>
+
+<script>
+
+for(let i=0;i<20;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(8+Math.random()*10)+"s";
+    heart.style.fontSize=(15+Math.random()*20
